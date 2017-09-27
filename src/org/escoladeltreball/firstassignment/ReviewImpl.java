@@ -18,7 +18,14 @@ public final class ReviewImpl implements Review {
 	 */
 	@Override
 	public double frequencyPercentage(int[] values, int n) {
-		return 0.0;
+		double frequency = 0;
+		for (int i = 0; i < values.length; i++) {
+			if (n == values[i]) {
+				frequency++;
+			}
+		}
+		frequency = frequency * 100 / values.length;
+		return frequency;
 	}
 
 	/*
